@@ -69,6 +69,9 @@ DOSKEY /history
 Your environment is now ready for development.
 
 
+# AI Trip Planner Repository Structure
+
+```
 .
 ├── agent/
 ├── config/
@@ -89,3 +92,4 @@ Your environment is now ready for development.
 ├── setup.py
 ├── streamlit_app.py
 └── uv.lock
+```
