@@ -41,10 +41,10 @@ uv python install cpython-3.11.13-windows-x86_64-none
 uv python list
 
 # Create a virtual environment named 'env' with a specific Python version
-uv venv env cpython-3.11.13-windows-x86_64-none
+uv venv env cpython-3.13.0-windows-x86_64-none
 
 # Alternative explicit method to create a virtual environment with specified Python version
-uv venv env --python cpython-3.11.13-windows-x86_64-none
+uv venv env --python cpython-3.13.0-windows-x86_64-none
 
 # Activate the virtual environment (Windows)
 C:\Users\Nahid\OneDrive - Calmi2\Desktop\Ai_trip_planner\env\Scripts\activate.bat
@@ -60,6 +60,9 @@ uv pip install langchain
 
 # Verify that LangChain has been successfully installed
 uv pip list
+
+# install requirements
+uv pip install -r requirements.txt
 
 # Display the command history in the terminal
 DOSKEY /history
