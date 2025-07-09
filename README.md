@@ -99,3 +99,78 @@ Your environment is now ready for development.
 ├── streamlit_app.py
 └── uv.lock
 ```
+
+This guide explains how to run your full-stack AI Trip Planner application, which includes a FastAPI backend and a Streamlit frontend.
+
+---
+
+## ✅ Step 1: Open Terminal and Activate the Environment
+
+First, navigate to your project directory:
+
+```bash
+cd C:\Users\Nahid\OneDrive - Calmi2\Desktop\Ai_trip_planner
+```
+
+Then activate your virtual environment:
+
+```bash
+env\Scripts\activate
+```
+
+> Make sure you see `(env)` before the command prompt, indicating the environment is activated.
+
+---
+
+## ✅ Step 2: Run the FastAPI Backend
+
+In the same terminal, start the FastAPI server:
+
+```bash
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+- ✅ Use `127.0.0.1` (not `0.0.0.0`) for better local access.
+- ✅ Keep this terminal open while using the app.
+- ✅ Visit [http://localhost:8000/docs](http://localhost:8000/docs) to verify the FastAPI server is running.
+
+---
+
+## ✅ Step 3: Run the Streamlit Frontend
+
+Open a **second terminal window**, navigate to the same folder:
+
+```bash
+cd C:\Users\Nahid\OneDrive - Calmi2\Desktop\Ai_trip_planner
+```
+
+Then run the Streamlit app:
+
+```bash
+streamlit run streamlit_app.py
+```
+
+Streamlit will launch in your browser at:
+
+```
+http://localhost:8501
+```
+
+---
+
+## ✅ Test the Full Stack Connection
+
+1. Type a prompt in the Streamlit UI (e.g., `Plan a trip to Tokyo for 3 days`).
+2. It will send a POST request to:
+
+```
+http://localhost:8000/query
+```
+
+3. The FastAPI backend will return the response using your AI pipeline.
+
+---
+
+## ✅ That's it!
+
+Now you're running a full-stack AI-powered travel planner on your machine 🎉
