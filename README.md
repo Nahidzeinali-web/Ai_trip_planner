@@ -67,6 +67,9 @@ uv pip install -r requirements.txt
 # Display the command history in the terminal
 DOSKEY /history
 
+
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
 ```
 
 Your environment is now ready for development.
